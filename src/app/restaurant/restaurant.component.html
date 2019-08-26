@@ -1,0 +1,7 @@
+<h1>{{ restaurant.name }}</h1>
+<p>{{ restaurant.address}}, {{restaurant.city}}</p>
+<img *ngFor="let img of restaurant.image" src="{{img.img}}">
+<p>{{ restaurant.cookingStyle}}</p>
+<p>{{ restaurant.description}}</p>
+<p>{{ restaurant.phoneNumber}}, {{restaurant.website}}</p>
+<p>{{ restaurant.note}} / 5</p>
