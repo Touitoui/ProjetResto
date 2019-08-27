@@ -1,18 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-
-.restoUnit {
-    text-align: center;
-}
-
-.imgResto {
-    border-radius: 15px;
-}
-
-.note {
-    font-weight: bold;
-    font-size: 2em;
-}
-
-body {
-    background-color: rgb(189, 148, 99);
-}
