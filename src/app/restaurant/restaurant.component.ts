@@ -23,4 +23,10 @@ export class RestaurantComponent implements OnInit {
     );
   }
 
+  delRestaurant() {
+    this.restaurantService.delRestaurant(this.restaurant.id).subscribe(
+      () => this.router.navigateByUrl('/')
+    );
+  }
+
 }

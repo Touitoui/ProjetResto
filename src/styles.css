@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 .restoUnit {
     text-align: center;
 }
 
 .imgResto {
     border-radius: 15px;
+    max-height: 350px;
 }
 
 .note {
@@ -15,4 +17,24 @@
 
 body {
     background-color: rgb(189, 148, 99);
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    max-width: 150px;
+}
+
+input {
+    max-width: 400px;
+    margin: auto;
+}
+
+.alert {
+    margin: auto;
+    margin-top: 10px;
+    max-width: 400px;
 }

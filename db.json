@@ -1,16 +1,28 @@
 {
-    "restaurant": [{
-        "id": 1,
-        "name": "Le restaurant",
-        "address": "1 rue de la gare",
-        "city": "Montpellier",
-        "image": [{
-            "img": "https://d1wb0ukcj65cfk.cloudfront.net/restaurant/the-malaya-pda-20150702070001594_lrg.jpg"
-        }],
-        "cookingStyle": "Traditionnel",
-        "description": "Miam miam",
-        "phoneNumber": "0836656565",
-        "website": "Mon fake restaurant",
-        "note": 2.5
-    }]
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "Le restaurant",
+      "address": "1 rue de la gare",
+      "city": "Montpellier",
+      "image": "https://d1wb0ukcj65cfk.cloudfront.net/restaurant/the-malaya-pda-20150702070001594_lrg.jpg",
+      "cookingStyle": "Traditionnel",
+      "description": "Miam miam",
+      "phoneNumber": "0836656565",
+      "website": "Mon fake restaurant",
+      "note": "2.9"
+    },
+    {
+      "id": 2,
+      "name": "nom",
+      "address": "addresse",
+      "city": "montpellier",
+      "image": "https://gffoodservice.org/wp-content/uploads/2015/03/restaurant-e1456862749354.jpg",
+      "cookingStyle": "it",
+      "description": "desc",
+      "phoneNumber": "daera",
+      "website": "aefez",
+      "note": "4"
+    }
+  ]
 }
