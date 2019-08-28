@@ -1,5 +1,7 @@
 <div>
-  <div *ngFor="let restaurant of restaurants">
-    {{ restaurant.name }}
+  <div *ngFor="let restaurant of restaurants" class="restauBlock" style="background:grey;margin:1px;">
+    {{ restaurant.name }} - {{ restaurant.cookingStyle}} - {{ restaurant.city}} - {{ restaurant.note }}
+    <img *ngFor="let img of restaurant.image" src="{{img.img}}" class="imgResto">
+
     </div>
 </div>

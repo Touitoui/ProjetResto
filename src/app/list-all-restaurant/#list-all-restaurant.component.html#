@@ -1,0 +1,5 @@
+<div>
+  <div *ngFor="let restaurant of restaurants">
+    {{ restaurant.name }} - {{restaurant}} - 
+    </div>
+</div>
