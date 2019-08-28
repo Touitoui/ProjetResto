@@ -1,7 +1,7 @@
-<div class="restoUnit">
+<div *ngIf="restaurant" class="restoUnit">
     <div>
         <h1>{{ restaurant.name }}</h1>
-        <img *ngFor="let img of restaurant.image" src="{{img.img}}" class="imgResto">
+        <img src="{{restaurant.image}}" class="imgResto">
     </div>
     <div>
         <p>{{ restaurant.address}}, {{restaurant.city}}</p>
@@ -11,4 +11,6 @@
         <p><strong>Site : </strong>{{restaurant.website}}</p>
         <p class="note">{{ restaurant.note}} / 5</p>
     </div>
+    <button routerLink="/formRestaurant/{{restaurant.id}}" class="btn btn-primary">EDIT</button>
+    <button (click)="delRestaurant()" class="btn btn-danger">DELETE</button>
 </div>

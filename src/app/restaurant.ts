@@ -7,7 +7,7 @@ export class Restaurant {
 
   city: string;
 
-  image: string[];
+  image: string;
 
   cookingStyle: string;
 
@@ -20,7 +20,7 @@ export class Restaurant {
   note: number;
 
   constructor(name: string, address: string, city: string,
-              image: string[], cookingStyle: string,
+              image: string, cookingStyle: string,
               description: string, phoneNumber: string,
               website: string, note: number) {
     this.name = name;
@@ -31,6 +31,6 @@ export class Restaurant {
     this.description = description;
     this.phoneNumber = phoneNumber;
     this.website = website;
-    this.note = 2.5;
+    this.note = note;
   }
 }
