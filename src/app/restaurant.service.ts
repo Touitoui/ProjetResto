@@ -13,13 +13,24 @@ static readonly BACK = 'http://localhost:3000/';
 
 constructor(private http: HttpClient) { }
 
-getRestaurant(id: number): Observable<Restaurant> {
+public getRestaurant(id: number): Observable<Restaurant> {
   return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/' + id);
+}
+
+public addRestaurant(restaurant: Restaurant) {
+  return this.http.post(RestaurantService.BACK + 'restaurant', restaurant);
+}
+
+public delRestaurant(id: number) {
+  return this.http.delete(RestaurantService.BACK + 'restaurant/' + id);
+}
+
+public editRestaurant(restaurant: Restaurant) {
+  return this.http.put(RestaurantService.BACK + 'restaurant/' + restaurant.id, restaurant);
 }
 
 getAllRestaurants(): Observable<Restaurant> {
   return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/');
 }
-
 
 }

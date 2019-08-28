@@ -63,12 +63,14 @@ app-top-bar h1 {
   margin: 0;
 }
 
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 .restoUnit {
     text-align: center;
 }
 
 .imgResto {
     border-radius: 15px;
+    max-height: 350px;
 }
 
 .note {
@@ -78,4 +80,24 @@ app-top-bar h1 {
 
 body {
     background-color: rgb(189, 148, 99);
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    max-width: 150px;
+}
+
+input {
+    max-width: 400px;
+    margin: auto;
+}
+
+.alert {
+    margin: auto;
+    margin-top: 10px;
+    max-width: 400px;
 }
