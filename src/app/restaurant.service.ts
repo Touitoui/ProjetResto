@@ -29,4 +29,8 @@ public editRestaurant(restaurant: Restaurant) {
   return this.http.put(RestaurantService.BACK + 'restaurant/' + restaurant.id, restaurant);
 }
 
+getAllRestaurants(): Observable<Restaurant> {
+  return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/');
+}
+
 }
