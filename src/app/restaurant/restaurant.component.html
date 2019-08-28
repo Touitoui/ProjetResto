@@ -1,0 +1,14 @@
+<div class="restoUnit">
+    <div>
+        <h1>{{ restaurant.name }}</h1>
+        <img *ngFor="let img of restaurant.image" src="{{img.img}}" class="imgResto">
+    </div>
+    <div>
+        <p>{{ restaurant.address}}, {{restaurant.city}}</p>
+        <p><strong>Style : </strong>{{ restaurant.cookingStyle}}</p>
+        <p>{{ restaurant.description}}</p>
+        <p><strong>Téléphone : </strong>{{ restaurant.phoneNumber}}</p>
+        <p><strong>Site : </strong>{{restaurant.website}}</p>
+        <p class="note">{{ restaurant.note}} / 5</p>
+    </div>
+</div>

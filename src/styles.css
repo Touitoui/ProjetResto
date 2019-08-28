@@ -63,3 +63,19 @@ app-top-bar h1 {
   margin: 0;
 }
 
+.restoUnit {
+    text-align: center;
+}
+
+.imgResto {
+    border-radius: 15px;
+}
+
+.note {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+body {
+    background-color: rgb(189, 148, 99);
+}
