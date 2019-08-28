@@ -17,4 +17,9 @@ getRestaurant(id: number): Observable<Restaurant> {
   return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/' + id);
 }
 
+getAllRestaurants(): Observable<Restaurant> {
+  return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/');
+}
+
+
 }

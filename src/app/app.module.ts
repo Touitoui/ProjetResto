@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListAllRestaurantComponent } from './list-all-restaurant/list-all-restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    ListAllRestaurantComponent
   ],
   imports: [
     BrowserModule,
