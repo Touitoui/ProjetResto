@@ -13,13 +13,10 @@ export class ListAllRestaurantComponent implements OnInit {
   constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit() {
-//     const restaurantId = 1;
     this.restaurantService.getAllRestaurants().subscribe(
       result => this.restaurants = result,
       error => console.log('une erreur de récup des resto est survenue', error)
       );
-
-//  this.restaurantService.
   }
 
 }
