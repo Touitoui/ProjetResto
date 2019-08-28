@@ -9,6 +9,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListAllRestaurantComponent } from './list-all-restaurant/list-all-restaurant.component';
 import { FormRestaurantComponent } from './formRestaurant/formRestaurant.component';
+import { SearchRestaurantComponent } from './search-restaurant/search-restaurant.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormRestaurantComponent } from './formRestaurant/formRestaurant.compone
     RestaurantComponent,
     ListAllRestaurantComponent,
     FormRestaurantComponent,
+    SearchRestaurantComponent,
 
   ],
   imports: [

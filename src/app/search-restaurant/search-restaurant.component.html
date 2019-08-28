@@ -1,0 +1,7 @@
+<div>
+  <div *ngFor="let restaurant of restaurants" class="restauBlock" style="background:grey;margin:1px;">
+    <a routerLink="/restaurant/{{restaurant.id}}">{{ restaurant.name }}</a> - {{ restaurant.cookingStyle}} - {{ restaurant.city}} - {{ restaurant.note }}
+    <img src="{{restaurant.image}}" class="imgResto">
+
+    </div>
+</div>

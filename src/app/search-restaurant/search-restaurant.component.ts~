@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+import { Restaurant } from '../restaurant';
+import { RestaurantService } from '../restaurant.service';
+
+@Component({
+  selector: 'app-search-restaurant',
+  templateUrl: './search-restaurant.component.html',
+  styleUrls: ['./search-restaurant.component.css']
+})
+export class SearchRestaurantComponent implements OnInit {
+      restaurants: Restaurant;
+
+  constructor(private restaurantService: RestaurantService) { }
+
+  ngOnInit() {
+      const restaurantQuery = +this.route.snapshot.paramMap.get('q');
+      this.restaurantService.getRestaurantsByQuery(restaurantQuery).subscribe(
+      result => this.restaurants = result,
+      error => console.log('une erreur de récup des resto est survenue', error)
+      );
+  }
+
+}
