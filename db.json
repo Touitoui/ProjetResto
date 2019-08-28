@@ -7,10 +7,10 @@
       "city": "Montpellier",
       "image": "https://d1wb0ukcj65cfk.cloudfront.net/restaurant/the-malaya-pda-20150702070001594_lrg.jpg",
       "cookingStyle": "Traditionnel",
-      "description": "Miam miam",
+      "description": "Miam miam ++",
       "phoneNumber": "0836656565",
-      "website": "Mon fake restaurant",
-      "note": "2.9"
+      "website": "http://test.com",
+      "note": 4
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "cookingStyle": "it",
       "description": "desc",
       "phoneNumber": "daera",
-      "website": "aefez",
+      "website": "http://test.com",
       "note": "4"
     }
   ]

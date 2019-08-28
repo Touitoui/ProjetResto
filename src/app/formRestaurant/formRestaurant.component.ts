@@ -49,7 +49,7 @@ export class FormRestaurantComponent implements OnInit {
         .subscribe( restaurant => this.model.reset(restaurant));
 
       this.model = this.formBuilder.group({
-        id: [{value: '', disabled: true}, [Validators.required]],
+        id: ['', [Validators.required]],
         name: ['', [Validators.required]],
         address: ['', [Validators.required]],
         city: ['', [Validators.required]],
@@ -62,7 +62,7 @@ export class FormRestaurantComponent implements OnInit {
       });
     }
     this.model = this.formBuilder.group({
-      id: [{ value: '', disabled: true }, [Validators.required]],
+      id: ['', [Validators.required]],
       name: ['', [Validators.required]],
       address: ['', [Validators.required]],
       city: ['', [Validators.required]],
