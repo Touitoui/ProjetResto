@@ -9,25 +9,27 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListAllRestaurantComponent } from './list-all-restaurant/list-all-restaurant.component';
 import { FormRestaurantComponent } from './formRestaurant/formRestaurant.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    RestaurantComponent,
-    ListAllRestaurantComponent,
-    FormRestaurantComponent,
-
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule,
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      TopBarComponent,
+      RestaurantComponent,
+      ListAllRestaurantComponent,
+      FormRestaurantComponent,
+      CommentComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      ReactiveFormsModule,
+      FormsModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
