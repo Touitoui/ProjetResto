@@ -30,12 +30,16 @@ export class RestaurantService {
     return this.http.put(RestaurantService.BACK + 'restaurant/' + restaurant.id, restaurant);
   }
 
-  getAllRestaurants(): Observable<Restaurant> {
+  public getAllRestaurants(): Observable<Restaurant> {
     return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/');
   }
 
-  getComments(id: number): Observable<Comment> {
+  public getComments(id: number): Observable<Comment> {
     return this.http.get<Comment>(RestaurantService.BACK + 'restaurant/' + id + '/comment');
+  }
+
+  public addComment(comment: Comment) {
+    return this.http.post(RestaurantService.BACK + 'comment', comment);
   }
 
 }

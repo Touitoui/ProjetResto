@@ -26,7 +26,7 @@
     ],
     "comment": [{
             "id": 1,
-            "date": "Thu Aug 29 2019 10:13:28 GMT+0200",
+            "date": 1567071737161,
             "author": "moi",
             "content": "c'est bon",
             "note": 4.2,
@@ -34,7 +34,7 @@
         },
         {
             "id": 2,
-            "date": "Thu Aug 29 2019 10:13:28 GMT+0200",
+            "date": 1567071737161,
             "author": "l'autre",
             "content": "c'est pas terrible",
             "note": 2,
@@ -42,11 +42,35 @@
         },
         {
             "id": 3,
-            "date": "Thu Aug 29 2019 10:13:28 GMT+0200",
+            "date": 1567071737161,
             "author": "incognito",
             "content": "c'est pas terrible",
             "note": 2,
             "restaurantId": 2
+        },
+        {
+            "author": "anonymous",
+            "content": "i can see you from behind",
+            "note": 5,
+            "date": 1567085606252,
+            "restaurantId": 2,
+            "id": 4
+        },
+        {
+            "author": "dali",
+            "content": "give me papel !",
+            "note": 1,
+            "date": 1567085810157,
+            "restaurantId": 2,
+            "id": 5
+        },
+        {
+            "author": "lui",
+            "content": "moi j'aime moyen",
+            "note": 3,
+            "date": 1567085878972,
+            "restaurantId": 1,
+            "id": 6
         }
     ]
 }

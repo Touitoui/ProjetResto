@@ -1,3 +1,23 @@
-<p>
-  comment works!
-</p>
+<div class="center">
+    <form [formGroup]="commentModel" class="formulaire">
+        <input formControlName="restaurantId" placeholder="id" class="form-control" style="display: none" />
+        <br>Votre Nom :
+        <input formControlName="author" placeholder="Votre Nom" required class="form-control" />
+        <div *ngIf="author.invalid && (author.dirty || author.touched)" class="alert alert-danger form-control">
+            <div *ngIf="author.hasError('required')">Nom requis.</div>
+        </div>
+        <br> Votre Commentaire :
+        <textarea rows="4" cols="50" formControlName="content" placeholder="Votre Avis" required class="form-control"></textarea>
+        <div *ngIf="content.invalid && (content.dirty || content.touched)" class="alert alert-danger form-control">
+            <div *ngIf="content.hasError('required')">Avis requis.</div>
+        </div>
+        <br> Note :
+        <input type="number" formControlName="note" placeholder="Note du restaurant" class="form-control" min="0" max="5" />
+        <div *ngIf="note.invalid && (note.dirty || note.touched)" class="alert alert-danger form-control">
+            <div *ngIf="note.hasError('required')">Note requise.</div>
+            <div *ngIf="note.hasError('min') || note.hasError('max')">Vous devez entrer une note entre 0 et 5.</div>
+        </div>
+        <br>
+        <button *ngIf="!isEditing" (click)="validationForm()" class="btn btn-success commentBtn">Commenter</button>
+    </form>
+</div>

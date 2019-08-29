@@ -1,4 +1,14 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+.frame {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 1px lightgray;
+    border-radius: 15px;
+    background-color: lightgray;
+}
+
 .restoUnit {
     text-align: center;
 }
@@ -6,6 +16,7 @@
 .imgResto {
     border-radius: 15px;
     max-height: 350px;
+    max-width: 350px;
 }
 
 .note {
@@ -25,6 +36,10 @@
     text-align: center;
 }
 
+.commentBtn {
+    margin-bottom: 20px;
+}
+
 body {
     background-color: rgb(189, 148, 99);
     margin: 0;
@@ -38,7 +53,8 @@ button {
     max-width: 150px;
 }
 
-input {
+input,
+textarea {
     max-width: 400px;
     margin: auto;
 }

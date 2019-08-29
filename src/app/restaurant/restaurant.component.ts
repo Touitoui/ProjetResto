@@ -38,4 +38,12 @@ export class RestaurantComponent implements OnInit {
     );
   }
 
+  insertComment() {
+    const restaurantId = +this.route.snapshot.paramMap.get('id');
+    this.restaurantService.getComments(restaurantId).subscribe(
+      result => this.comments = result,
+      error => console.log('erreur commentaires', error)
+    );
+  }
+
 }
