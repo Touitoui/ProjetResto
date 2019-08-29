@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,16 +10,14 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListAllRestaurantComponent } from './list-all-restaurant/list-all-restaurant.component';
 import { FormRestaurantComponent } from './formRestaurant/formRestaurant.component';
-import { SearchRestaurantComponent } from './search-restaurant/search-restaurant.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopBarComponent,
+    declarations: [
+      AppComponent,
+      TopBarComponent,
     RestaurantComponent,
-    ListAllRestaurantComponent,
-    FormRestaurantComponent,
-    SearchRestaurantComponent,
+      ListAllRestaurantComponent,
+      FormRestaurantComponent,
 
   ],
   imports: [
@@ -27,7 +26,7 @@ import { SearchRestaurantComponent } from './search-restaurant/search-restaurant
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-
+      Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
