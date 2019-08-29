@@ -8,18 +8,16 @@ import { RestaurantService } from '../restaurant.service';
   styleUrls: ['./list-all-restaurant.component.css']
 })
 export class ListAllRestaurantComponent implements OnInit {
-       restaurants: Restaurant;
-       
-  constructor(private restaurantService: RestaurantService) { }
-
-  ngOnInit() {
-//     const restaurantId = 1;
-    this.restaurantService.getAllRestaurants().subscribe(
-      result => this.restaurants = result,
-      error => console.log('une erreur de récup des resto est survenue', error)
-      );
-
-//  this.restaurantService.
-  }
-
+    restaurants: Restaurant;
+    searchText
+    
+    constructor(private restaurantService: RestaurantService) { }
+    
+    ngOnInit() {
+	this.restaurantService.getAllRestaurants().subscribe(
+	    result => this.restaurants = result,
+	    error => console.log('une erreur de récup des resto est survenue', error)
+	);
+    }
+    
 }

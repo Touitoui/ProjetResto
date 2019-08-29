@@ -1,5 +1,10 @@
 <div>
-  <div *ngFor="let restaurant of restaurants" class="restauBlock" style="background:grey;margin:1px;">
+      <div class="search-restaurant">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search">
+    </div>
+</div>
+<div>
+  <div *ngFor="let restaurant of restaurants | filter:searchText" class="restauBlock" style="background:grey;margin:1px;">
     <a routerLink="/restaurant/{{restaurant.id}}">{{ restaurant.name }}</a> - {{ restaurant.cookingStyle}} - {{ restaurant.city}} - {{ restaurant.note }}
     <img src="{{restaurant.image}}" class="imgResto">
 

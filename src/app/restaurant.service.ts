@@ -42,4 +42,24 @@ export class RestaurantService {
     return this.http.post(RestaurantService.BACK + 'comment', comment);
   }
 
+getRestaurantsByField(field: string, search: string): Observable<Restaurant>{
+  return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/?' + field + '=' + search)
+}
+
+getRestaurantsByQuery(query: string): Observable<Restaurant>{
+  return this.getRestaurantsByField('q', query);
+}
+
+getRestaurantsByCityAndQuery(city: string, query: string): Observable<Restaurant>{
+  return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/?city=' + city + '&q=' + query)
+}
+
+getRestaurantsByName(name: string): Observable<Restaurant>{
+  return this.getRestaurantsByField("name", name);
+}
+
+getRestaurantsByCity(city: string): Observable<Restaurant>{
+  return this.getRestaurantsByField("city", city);
+}
+
 }
