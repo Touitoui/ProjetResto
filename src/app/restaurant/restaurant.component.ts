@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Restaurant } from '../restaurant';
+import { Comment } from '../comment';
 import { RestaurantService } from '../restaurant.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -13,6 +14,9 @@ export class RestaurantComponent implements OnInit {
   @Input()
   restaurant: Restaurant;
 
+  @Input()
+  comments: Comment;
+
   constructor(private restaurantService: RestaurantService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
@@ -20,6 +24,11 @@ export class RestaurantComponent implements OnInit {
     this.restaurantService.getRestaurant(restaurantId).subscribe(
       result => this.restaurant = result,
       error => console.log('une erreur de récup resto id est survenue', error)
+    );
+
+    this.restaurantService.getComments(restaurantId).subscribe(
+      result => this.comments = result,
+      error => console.log('erreur commentaires', error)
     );
   }
 
