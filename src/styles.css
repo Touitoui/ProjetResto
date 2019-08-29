@@ -41,8 +41,12 @@
 }
 
 body {
-    background-color: rgb(189, 148, 99);
     margin: 0;
+    background-image: url("src/assets/restaurant.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .center {
