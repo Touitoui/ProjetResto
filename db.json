@@ -18,7 +18,7 @@
       "address": "addresse",
       "city": "montpellier",
       "image": "https://gffoodservice.org/wp-content/uploads/2015/03/restaurant-e1456862749354.jpg",
-      "cookingStyle": "it",
+      "cookingStyle": "Italien",
       "description": "desc",
       "phoneNumber": "0836656565",
       "website": "http://test.com",
@@ -81,6 +81,38 @@
       "date": 1567087431835,
       "restaurantId": 1,
       "id": 7
+    },
+    {
+      "author": "test",
+      "content": "test",
+      "note": 3,
+      "date": 1567090753745,
+      "restaurantId": 1,
+      "id": 8
+    },
+    {
+      "author": "zt",
+      "content": "dsf",
+      "note": 2,
+      "date": 1567090830022,
+      "restaurantId": 1,
+      "id": 9
+    },
+    {
+      "author": "test",
+      "content": "test",
+      "note": 3,
+      "date": 1567093246238,
+      "restaurantId": 1,
+      "id": 10
+    },
+    {
+      "author": "picasso",
+      "content": "je dessine comme un enfant",
+      "note": 3.2,
+      "date": 1567093300015,
+      "restaurantId": 2,
+      "id": 11
     }
   ]
 }

@@ -1,4 +1,5 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 .frame {
     max-width: 500px;
     margin: auto;
@@ -7,6 +8,17 @@
     border: solid 1px lightgray;
     border-radius: 15px;
     background-color: lightgray;
+    padding: 10px;
+}
+
+.searchBar {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-weight: 700;
 }
 
 .restoUnit {
@@ -17,6 +29,12 @@
     border-radius: 15px;
     max-height: 350px;
     max-width: 350px;
+}
+
+.imgRestoCard {
+    border-radius: 5px;
+    max-height: 150px;
+    max-width: 150px;
 }
 
 .note {
@@ -47,6 +65,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Nunito', sans-serif;
 }
 
 .center {
