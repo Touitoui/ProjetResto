@@ -1,10 +1,9 @@
 <div class="frame">
 
-    <h1 class="center">Nouveau Restaurant</h1>
+    <h1 class="center">Gestion Restaurant</h1>
 
     <div class="center">
         <form [formGroup]="model" class="formulaire">
-            <input formControlName="id" placeholder="id" class="form-control" style="display: none" />
             <br>Nom :
             <input formControlName="name" placeholder="Nom du Restaurant" required class="form-control" />
             <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger form-control">
@@ -31,7 +30,7 @@
                 <div *ngIf="cookingStyle.hasError('required')">Style culinaire requis.</div>
             </div>
             <br> Descrition :
-            <input formControlName="description" placeholder="Description du restaurant" required class="form-control" />
+            <textarea rows="10" cols="50" formControlName="description" placeholder="Description du restaurant" required class="form-control"></textarea>
             <div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger form-control">
                 <div *ngIf="description.hasError('required')">Description requise.</div>
             </div>

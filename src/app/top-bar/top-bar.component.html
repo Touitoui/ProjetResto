@@ -1,2 +1,10 @@
-<a [routerLink]="['/']" class="button fancy-button"> Home </a>
-<a [routerLink]="['/formRestaurant']" class="button fancy-button"> Ajouter un Restaurant </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a [routerLink]="['/']" class="button fancy-button navbar-brand">Home</a>
+    <div id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a [routerLink]="['/formRestaurant']" class="button fancy-button"> Ajouter un Restaurant </a>
+            </li>
+        </ul>
+    </div>
+</nav>

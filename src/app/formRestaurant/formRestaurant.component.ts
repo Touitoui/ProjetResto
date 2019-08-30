@@ -2,8 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { RestaurantService } from '../restaurant.service';
-import { Restaurant } from '../restaurant';
-
 
 @Component({
   selector: 'app-formRestaurant',
@@ -14,6 +12,7 @@ export class FormRestaurantComponent implements OnInit {
 
   isEditing = false;
   model: FormGroup;
+  idResto = +this.route.snapshot.paramMap.get('id');
 
   constructor(
     private formBuilder: FormBuilder,
@@ -40,16 +39,14 @@ export class FormRestaurantComponent implements OnInit {
   );
 
   ngOnInit() {
-    const idResto = +this.route.snapshot.paramMap.get('id');
 
-    if (idResto) {
+    if (this.idResto) {
       this.isEditing = true;
       this.restaurantService
-        .getRestaurant(idResto)
+        .getRestaurant(this.idResto)
         .subscribe( restaurant => this.model.reset(restaurant));
 
       this.model = this.formBuilder.group({
-        id: ['', [Validators.required]],
         name: ['', [Validators.required]],
         address: ['', [Validators.required]],
         city: ['', [Validators.required]],
@@ -62,7 +59,6 @@ export class FormRestaurantComponent implements OnInit {
       });
     }
     this.model = this.formBuilder.group({
-      id: ['', [Validators.required]],
       name: ['', [Validators.required]],
       address: ['', [Validators.required]],
       city: ['', [Validators.required]],
@@ -115,11 +111,12 @@ export class FormRestaurantComponent implements OnInit {
     if (this.model.valid) {
       this.restaurantService
         .addRestaurant(this.model.value)
-        .subscribe(result => this.router.navigateByUrl('/formRestaurant/'));
+        .subscribe(result => this.router.navigateByUrl(''));
     }
   }
   validationEdit() {
     if (this.model.valid) {
+      this.model.value.id = this.idResto;
       this.restaurantService
         .editRestaurant(this.model.value)
         .subscribe(result => this.router.navigateByUrl('/restaurant/' + this.model.value.id));
