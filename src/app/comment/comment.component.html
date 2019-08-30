@@ -1,10 +1,6 @@
 <div class="center">
-<<<<<<< HEAD
+
     <form [formGroup]="commentModel" class="formulaire">
-=======
-    <form [formGroup]="commentModel" class="formulaire" (ngSubmit)="validationForm()">
-        <input formControlName="restaurantId" placeholder="id" class="form-control" style="display: none" />
->>>>>>> c38c996f1aede72e9d5b15e8f5595f5dcc1b8050
         <br>Votre Nom :
         <input formControlName="author" placeholder="Votre Nom" required class="form-control" />
         <div *ngIf="author.invalid && (author.dirty || author.touched)" class="alert alert-danger form-control">
@@ -22,6 +18,6 @@
             <div *ngIf="note.hasError('min') || note.hasError('max')">Vous devez entrer une note entre 0 et 5.</div>
         </div>
         <br>
-        <button *ngIf="!isEditing" class="btn btn-success commentBtn">Commenter</button>
+        <button *ngIf="!isEditing" class="btn btn-success commentBtn" (click)="validationForm()">Commenter</button>
     </form>
 </div>

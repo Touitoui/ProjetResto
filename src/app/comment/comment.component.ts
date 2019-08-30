@@ -49,7 +49,6 @@ export class CommentComponent implements OnInit {
   }
 
   validationForm() {
-<<<<<<< HEAD
     const commentData = this.commentModel.value;
     if (this.commentModel.valid) {
       commentData.date = Date.now();
@@ -63,17 +62,6 @@ export class CommentComponent implements OnInit {
           }
         );
     }
-=======
-      const commentData = this.commentModel.value;
-      if (this.commentModel.valid) {
-	  this.restaurantService
-              .addComment(commentData)
-              .subscribe(result => this.router.navigateByUrl('/restaurant/' + commentData.restaurantId));
-	  this.newComment.emit();
-      }
-      this.commentModel.reset();
-      this.initModel(this.route.snapshot.paramMap.get('id'));
->>>>>>> c38c996f1aede72e9d5b15e8f5595f5dcc1b8050
   }
 
 }
