@@ -15,7 +15,7 @@ export class RestaurantService {
   constructor(private http: HttpClient) { }
 
   public getRestaurant(id: number): Observable<Restaurant> {
-    return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/' + id);
+    return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/' + id + '?_embed=comment');
   }
 
   public addRestaurant(restaurant: Restaurant) {
@@ -34,32 +34,28 @@ export class RestaurantService {
     return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/');
   }
 
-  public getComments(id: number): Observable<Comment> {
-    return this.http.get<Comment>(RestaurantService.BACK + 'restaurant/' + id + '/comment');
-  }
-
   public addComment(comment: Comment) {
     return this.http.post(RestaurantService.BACK + 'comment', comment);
   }
 
-getRestaurantsByField(field: string, search: string): Observable<Restaurant>{
-  return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/?' + field + '=' + search)
-}
+  getRestaurantsByField(field: string, search: string): Observable<Restaurant>{
+    return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/?' + field + '=' + search)
+  }
 
-getRestaurantsByQuery(query: string): Observable<Restaurant>{
-  return this.getRestaurantsByField('q', query);
-}
+  getRestaurantsByQuery(query: string): Observable<Restaurant>{
+    return this.getRestaurantsByField('q', query);
+  }
 
-getRestaurantsByCityAndQuery(city: string, query: string): Observable<Restaurant>{
-  return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/?city=' + city + '&q=' + query)
-}
+  getRestaurantsByCityAndQuery(city: string, query: string): Observable<Restaurant>{
+    return this.http.get<Restaurant>(RestaurantService.BACK + 'restaurant/?city=' + city + '&q=' + query)
+  }
 
-getRestaurantsByName(name: string): Observable<Restaurant>{
-  return this.getRestaurantsByField("name", name);
-}
+  getRestaurantsByName(name: string): Observable<Restaurant>{
+    return this.getRestaurantsByField("name", name);
+  }
 
-getRestaurantsByCity(city: string): Observable<Restaurant>{
-  return this.getRestaurantsByField("city", city);
-}
+  getRestaurantsByCity(city: string): Observable<Restaurant>{
+    return this.getRestaurantsByField("city", city);
+  }
 
 }

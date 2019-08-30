@@ -1,6 +1,5 @@
 <div class="center">
     <form [formGroup]="commentModel" class="formulaire">
-        <input formControlName="restaurantId" placeholder="id" class="form-control" style="display: none" />
         <br>Votre Nom :
         <input formControlName="author" placeholder="Votre Nom" required class="form-control" />
         <div *ngIf="author.invalid && (author.dirty || author.touched)" class="alert alert-danger form-control">

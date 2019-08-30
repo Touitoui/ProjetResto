@@ -1,5 +1,5 @@
-<div class="frame">
-    <div *ngIf="restaurant" class="restoUnit">
+<div *ngIf="restaurant" class="frame">
+    <div class="restoUnit">
         <div>
             <h1>{{ restaurant.name }}</h1>
             <img src="{{restaurant.image}}" class="imgResto">
@@ -16,12 +16,12 @@
         <button (click)="delRestaurant()" class="btn btn-danger">Supprimer</button>
     </div>
 
-    <div *ngIf="comments" class="restoUnit">
-        <div *ngFor="let com of comments" class="comment">
+    <div class="restoUnit">
+        <div *ngFor="let com of restaurant.comment" class="comment">
             <p>Par <strong>{{com.author}}</strong>, le <strong>{{com.date| date:'d/M/y' }}</strong></p>
             <p>{{ com.content }}</p>
             <p><strong>{{ com.note }} / 5</strong></p>
         </div>
     </div>
-    <app-comment (newComment)="insertComment()"></app-comment>
+    <app-comment (newComment)="insertComment($event)"></app-comment>
 </div>

@@ -21,15 +21,14 @@ export class RestaurantComponent implements OnInit {
 
   ngOnInit() {
     const restaurantId = +this.route.snapshot.paramMap.get('id');
+
+    this.loadRestaurant(restaurantId);
+  }
+
+  private loadRestaurant(restaurantId: number) {
     this.restaurantService.getRestaurant(restaurantId).subscribe(
       result => this.restaurant = result,
-      error => console.log('une erreur de récup resto id est survenue', error)
-    );
-
-    this.restaurantService.getComments(restaurantId).subscribe(
-      result => this.comments = result,
-      error => console.log('erreur commentaires', error)
-    );
+      error => console.log('une erreur de récup resto id est survenue', error));
   }
 
   delRestaurant() {
@@ -40,10 +39,7 @@ export class RestaurantComponent implements OnInit {
 
   insertComment() {
     const restaurantId = +this.route.snapshot.paramMap.get('id');
-    this.restaurantService.getComments(restaurantId).subscribe(
-      result => this.comments = result,
-      error => console.log('erreur commentaires', error)
-    );
+    this.loadRestaurant(restaurantId);
   }
 
 }
