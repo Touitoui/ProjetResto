@@ -24,14 +24,18 @@ export class CommentComponent implements OnInit {
 
   ngOnInit() {
     const idResto = +this.route.snapshot.paramMap.get('id');
-    this.commentModel = this.formBuilder.group({
+      this.initModel(idResto);
+  }
+
+    initModel(idResto){
+        this.commentModel = this.formBuilder.group({
       author: ['', [Validators.required]],
       content: ['', [Validators.required]],
       note: ['', [Validators.min(0), Validators.max(5)]],
       date: Date.now(),
       restaurantId: [idResto, [Validators.required]]
-    });
-  }
+	});
+    }
 
   get author() {
     return this.commentModel.get('author');
@@ -46,14 +50,15 @@ export class CommentComponent implements OnInit {
   }
 
   validationForm() {
-    const commentData = this.commentModel.value;
-    if (this.commentModel.valid) {
-      this.restaurantService
-        .addComment(commentData)
-        .subscribe(result => this.router.navigateByUrl('/restaurant/' + commentData.restaurantId));
-    }
-    this.newComment.emit();
-    this.commentModel.reset();
+      const commentData = this.commentModel.value;
+      if (this.commentModel.valid) {
+	  this.restaurantService
+              .addComment(commentData)
+              .subscribe(result => this.router.navigateByUrl('/restaurant/' + commentData.restaurantId));
+	  this.newComment.emit();
+      }
+      this.commentModel.reset();
+      this.initModel(this.route.snapshot.paramMap.get('id'));
   }
 
 }
